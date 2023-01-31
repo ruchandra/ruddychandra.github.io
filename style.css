@@ -1,0 +1,135 @@
+*{
+    padding:0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+body{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    text-align: center;
+    width: 100%;
+    background-image: url(gallery.jpg);
+    font-weight: bold;
+    font-family: Arial;
+    text-transform: uppercase;
+    font-style: italic;
+}
+
+.container{
+    display: grid;
+    grid-template-rows: 10vh 60vh 160vh;
+   grid-template-areas: 'header header header'
+                        'main main main'
+                        'gallery gallery gallery';
+}
+
+/* this my head */
+.header{
+    height: 10vh;
+    width: 100%;
+    position: fixed;
+    grid-area: header;
+    background-color: blueviolet;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+nav{
+    background-color: antiquewhite;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+    border-radius: 5px;
+}
+nav:hover{
+    background-color:rgb(34, 3, 63);
+}
+
+nav a:hover{
+    box-shadow: 1px 2px 2px 0.5px;
+    border: 0px solid black ;
+    color: black;
+    background-color: white;
+    border-radius: 5px;
+    font-size: 20px;
+}
+span{
+    color: white;
+}
+span p{
+    float: right;
+    font-size: 9px;
+}
+
+/* this is my conten */
+
+.main{
+    grid-area: main;
+    display: grid;
+    grid-template-columns: 30% 40%;
+    grid-template-rows: 40% 10%;
+    grid-template-areas: 'isi conten'
+                        'isi conten';
+     place-content: center;
+     justify-items: center;
+     column-gap: 5%;
+
+
+}
+
+.isi{
+    height: 130%;
+    justify-items: center;
+    border-radius: 5px;
+    padding: 5px;
+    grid-area: isi;
+    background-color: rgba(52, 61, 58, 0.616);
+}
+.isi h1{
+    text-justify: auto;
+}
+.conten img{
+    border: 3px seashell solid;
+    border-radius: 50%;
+    grid-area: conten;
+    background-color: rgb(221, 14, 14);
+}
+
+.gallery{
+    box-shadow: 2px 2px 3px black;
+    border-radius: 5px;
+    border: 5px solid white;
+    margin:auto;
+    width: 70%;
+    grid-area: gallery;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 5px;
+}
+img{
+    display: block;
+    width: 100%;
+}
+
+
+/* reponsive */
+
+@media (max-width: 400px){
+    .main{
+        grid-template-columns: 30% 30%;
+        grid-template-rows: 40% 10%;
+        grid-template-areas: 'isi isi'
+                            'conten conten';
+         place-content: center;
+         justify-items: center;
+         column-gap: 5%;
+    }
+}
+
+
+
