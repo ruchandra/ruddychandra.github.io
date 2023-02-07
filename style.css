@@ -12,7 +12,7 @@ body{
     background-position: center;
     text-align: center;
     width: 100%;
-    background-image: url(gallery.jpg);
+    background-image: url(zath.jpg);
     font-weight: bold;
     font-family: Arial;
     text-transform: uppercase;
@@ -20,15 +20,54 @@ body{
 }
 
 .container{
+    /* background-color: rgba(61, 197, 179, 0.418); */
+    width: 100%;
     display: grid;
     grid-template-rows: 10vh 60vh 160vh;
    grid-template-areas: 'header header header'
-                        'main main main'
-                        'gallery gallery gallery';
+                        'main main main';
 }
 
+.main{
+    border-radius: 5px;
+    margin: auto;
+    width: 50%;
+    height: 30rem;
+    background-color: rgba(0, 0, 255, 0.39);
+    grid-area: main;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+.isi img{
+    border: 2px solid whitesmoke;
+    box-shadow: 2px 2px 2px 0.8px;
+    border-radius: 70%;
+    display: inline-block;
+    width: 13rem;
+    height: 15em;
+}
+.isi button{
+    margin: 10px;
+    width: 50px;
+}
+
+.isi ul li{
+    margin: 4px;
+}
+
+.isi h4{
+    border-radius: 5px;
+    border-bottom: 2px solid black;
+    margin: auto;
+    background-color: antiquewhite;
+    width: max-content;
+}
 /* this my head */
 .header{
+    /* opacity: 0; */
     height: 10vh;
     width: 100%;
     position: fixed;
@@ -66,56 +105,36 @@ span p{
     font-size: 9px;
 }
 
-/* this is my conten */
 
-.main{
-    grid-area: main;
-    display: grid;
-    grid-template-columns: 30% 40%;
-    grid-template-rows: 40% 10%;
-    grid-template-areas: 'isi conten'
-                        'isi conten';
-     place-content: center;
-     justify-items: center;
-     column-gap: 5%;
-
-
+/* section */
+section{
+    border-top: 3px solid black;
+    margin: 30px auto;
+    align-items: center;
+    column-gap: 30px;
+    display: flex;
+    flex-direction: row;
+    width: 60%;
+    height: 100rem;
 }
 
-.isi{
-    height: 130%;
-    justify-items: center;
+section img{
+    border: 3px solid whitesmoke;
     border-radius: 5px;
-    padding: 5px;
-    grid-area: isi;
-    background-color: rgba(52, 61, 58, 0.616);
-}
-.isi h1{
-    text-justify: auto;
-}
-.conten img{
-    border: 3px seashell solid;
-    border-radius: 50%;
-    grid-area: conten;
-    background-color: rgb(221, 14, 14);
+    box-shadow: 2px 2px 7px 0.8px;
+    display: inline-block;
+    width: 40vw;
+    height: 350px;
 }
 
-.gallery{
-    box-shadow: 2px 2px 3px black;
+.card{
+    background-color: aliceblue;
+    width: min-content;
     border-radius: 5px;
-    border: 5px solid white;
-    margin:auto;
-    width: 70%;
-    grid-area: gallery;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 5px;
 }
-img{
-    display: block;
-    width: 100%;
+.conten-dua{
+    width: 60vw;
 }
-
 
 /* reponsive */
 
@@ -131,5 +150,16 @@ img{
     }
 }
 
+
+@media (max-width: 800px){
+  .conten-dua{
+    display: grid;
+    font-weight: bold;
+    font-size: 9px;
+    column-gap: 30vw;
+    width: 70vw;
+  }
+    
+}
 
 
